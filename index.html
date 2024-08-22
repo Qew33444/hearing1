@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .quiz {
+            margin-top: 20px;
+        }
+        .quiz div {
+            margin-bottom: 10px;
+        }
+        .quiz button {
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .quiz button:hover {
+            background-color: #218838;
+        }
+        .result, .answers {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chocolate Quiz</h1>
+        
+        <!-- Audio File -->
+        <audio controls>
+            <source src="reading_test_slow.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Quiz Questions -->
+        <div class="quiz">
+            <div>
+                <p>1. Where did chocolate originate?</p>
+                <input type="radio" name="q1" value="a"> Europe<br>
+                <input type="radio" name="q1" value="b"> Central and South America<br>
+                <input type="radio" name="q1" value="c"> Africa<br>
+                <input type="radio" name="q1" value="d"> Asia<br>
+            </div>
+            <div>
+                <p>2. What was the name of the bitter drink made by the Mayans and Aztecs?</p>
+                <input type="radio" name="q2" value="a"> Espresso<br>
+                <input type="radio" name="q2" value="b"> Latte<br>
+                <input type="radio" name="q2" value="c"> Xocoatl<br>
+                <input type="radio" name="q2" value="d"> Cappuccino<br>
+            </div>
+            <div>
+                <p>3. When did cocoa beans first arrive in Europe?</p>
+                <input type="radio" name="q3" value="a"> In the 16th century<br>
+                <input type="radio" name="q3" value="b"> In the 20th century<br>
+                <input type="radio" name="q3" value="c"> In the 15th century<br>
+                <input type="radio" name="q3" value="d"> In the 18th century<br>
+            </div>
+            <div>
+                <p>4. Who brought cocoa beans to Europe?</p>
+                <input type="radio" name="q4" value="a"> The Mayans<br>
+                <input type="radio" name="q4" value="b"> The Spanish explorers<br>
+                <input type="radio" name="q4" value="c"> The French<br>
+                <input type="radio" name="q4" value="d"> The British<br>
+            </div>
+            <div>
+                <p>5. What ingredient made chocolate more palatable in Europe?</p>
+                <input type="radio" name="q5" value="a"> Salt<br>
+                <input type="radio" name="q5" value="b"> Milk<br>
+                <input type="radio" name="q5" value="c"> Sugar<br>
+                <input type="radio" name="q5" value="d"> Honey<br>
+            </div>
+            <div>
+                <p>6. When were the first solid chocolate bars created?</p>
+                <input type="radio" name="q6" value="a"> In the 16th century<br>
+                <input type="radio" name="q6" value="b"> In the 19th century<br>
+                <input type="radio" name="q6" value="c"> In the 17th century<br>
+                <input type="radio" name="q6" value="d"> In the 20th century<br>
+            </div>
+            <div>
+                <p>7. What is one reason chocolate became popular in Europe?</p>
+                <input type="radio" name="q7" value="a"> It was cheap and available to everyone.<br>
+                <input type="radio" name="q7" value="b"> It was considered a gift from the gods.<br>
+                <input type="radio" name="q7" value="c"> It became a sweetened beverage.<br>
+                <input type="radio" name="q7" value="d"> It was used as a currency.<br>
+            </div>
+            <div>
+                <p>8. How is chocolate mostly consumed today?</p>
+                <input type="radio" name="q8" value="a"> Only in drinks<br>
+                <input type="radio" name="q8" value="b"> In bars, candies, cakes, and beverages<br>
+                <input type="radio" name="q8" value="c"> As a religious offering<br>
+                <input type="radio" name="q8" value="d"> Only in liquid form<br>
+            </div>
+            <div>
+                <p>9. What ancient civilizations considered cocoa a gift from the gods?</p>
+                <input type="radio" name="q9" value="a"> The Romans and Greeks<br>
+                <input type="radio" name="q9" value="b"> The Egyptians and Persians<br>
+                <input type="radio" name="q9" value="c"> The Mayans and Aztecs<br>
+                <input type="radio" name="q9" value="d"> The Chinese and Japanese<br>
+            </div>
+            <div>
+                <p>10. Which of the following best describes the modern popularity of chocolate?</p>
+                <input type="radio" name="q10" value="a"> It is mainly eaten by the wealthy.<br>
+                <input type="radio" name="q10" value="b"> It is popular only in Europe.<br>
+                <input type="radio" name="q10" value="c"> It is enjoyed worldwide in various forms.<br>
+                <input type="radio" name="q10" value="d"> It is rarely consumed today.<br>
+            </div>
+            <div>
+                <p>11. What was the original taste of the chocolate drink in ancient times?</p>
+                <input type="radio" name="q11" value="a"> Sweet and creamy<br>
+                <input type="radio" name="q11" value="b"> Bitter and spicy<br>
+                <input type="radio" name="q11" value="c"> Salty<br>
+                <input type="radio" name="q11" value="d"> Fruity<br>
+            </div>
+            <div>
+                <p>12. Which of the following helped pave the way for modern chocolate?</p>
+                <input type="radio" name="q12" value="a"> The invention of sweetened cocoa drinks<br>
+                <input type="radio" name="q12" value="b"> The use of chocolate as money<br>
+                <input type="radio" name="q12" value="c"> The consumption of raw cocoa beans<br>
+                <input type="radio" name="q12" value="d"> The decline of Mayan civilization<br>
+            </div>
+
+            <button onclick="submitQuiz()">Submit Quiz</button>
+
+            <!-- Result -->
+            <div class="result" id="result"></div>
+            <div class="answers" id="answers"></div>
+        </div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            let score = 0;
+            const correctAnswers = {
+                q1: "b",
+                q2: "c",
+                q3: "a",
+                q4: "b",
+                q5: "c",
+                q6: "b",
+                q7: "c",
+                q8: "b",
+                q9: "c",
+                q10: "c",
+                q11: "b",
+                q12: "a"
+            };
+            
+            for (let question in correctAnswers) {
+                let answer = document.querySelector(`input[name="${question}"]:checked`);
+                if (answer && answer.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+            
+            document.getElementById("result").innerHTML = `You scored ${score}/12.`;
+            document.getElementById("answers").innerHTML = `
+                Correct Answers:
+                <ul>
+                    <li>1. Central and South America</li>
+                    <li>2. Xocoatl</li>
+                    <li>3. In the 16th century</li>
+                    <li>4. The Spanish explorers</li>
+                    <li>5. Sugar</li>
+                    <li>6. In the 19th century</li>
+                    <li>7. It became a sweetened beverage</li>
+                    <li>8. In bars, candies, cakes, and beverages</li>
+                    <li>9. The Mayans and Aztecs</li>
+                    <li>10. It is enjoyed worldwide in various forms</li>
+                    <li>11. Bitter and spicy</li>
+                    <li>12. The invention of sweetened cocoa drinks</li>
+                </ul>
+            `;
+        }
+    </script>
+</body>
+</html>
